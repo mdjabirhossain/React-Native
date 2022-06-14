@@ -23,7 +23,7 @@ export const TrackerCover = styled.View`
 
 export const TrackerContainer = styled.View`
   background-color: rgba(255, 255, 255, 0.7);
-  padding: ${(props) => props.theme.space[4]};
+  padding: ${(props) => props.theme.space[3]};
   margin-top: ${(props) => props.theme.space[2]};
   margin-left: ${(props) => props.theme.space[3]};
   margin-right: ${(props) => props.theme.space[3]};
@@ -31,4 +31,10 @@ export const TrackerContainer = styled.View`
 
 export const Title = styled(Text)`
   font-size: 30px;
+`;
+
+export const RoundedButtonContainer = styled.View`
+  padding: ${(props) => props.theme.space[4]};
+  align-items: center;
+  margin-top: ${(props) => props.theme.space[3]};
 `;

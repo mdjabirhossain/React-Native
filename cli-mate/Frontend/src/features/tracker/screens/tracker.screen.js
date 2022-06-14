@@ -4,36 +4,48 @@ import {
   TrackerBackground,
   TrackerCover,
   TrackerContainer,
+  RoundedButtonContainer,
   Title,
 } from "../components/tracker.styles";
 import { SafeAreaView, StyleSheet } from "react-native";
 import DropDown from "react-native-paper-dropdown";
 import { DropDownMenu } from "../components/dropdown.component";
 import { SearchLocationBar } from "../components/search-location.component";
+import { Spacer } from "../../../components/spacer/spacer.component";
+import styled from "styled-components/native";
+import { RoundedButton } from "../../../components/utility/rounded-button.component";
 
-const methodsList = [
-  {
-    label: "Car",
-    value: "car",
-  },
-  {
-    label: "Motorbike",
-    value: "motorbike",
-  },
-];
+const ToggleContainer = styled.View`
+  flex-direction: row;
+`;
 
 export const TrackerScreen = () => {
   const [showDropDown, setShowDropDown] = useState(false);
   const [method, setMethod] = useState("");
+  const [toggleTransportation, setToggleTransportation] = useState(true);
+  const [togglePower, setTogglePower] = useState(false);
+
   return (
     <SafeAreaView style={styles.safeContainerStyle}>
       <TrackerBackground>
         <TrackerCover />
+        <Spacer position="bottom" size="large" />
+        <Spacer position="bottom" size="large" />
+        <Spacer position="bottom" size="large" />
+        <Spacer position="bottom" size="large" />
+        <Spacer position="bottom" size="large" />
+        <Spacer position="bottom" size="large" />
         <TrackerContainer>
+          <Spacer position="top" size="medium" />
           <DropDownMenu dropDownType="Method" />
           <SearchLocationBar placeholder="From" />
           <SearchLocationBar placeholder="To" />
+          <Spacer position="bottom" size="large" />
         </TrackerContainer>
+        <RoundedButtonContainer>
+          <Spacer position="top" size="medium" />
+          <RoundedButton size={100} />
+        </RoundedButtonContainer>
       </TrackerBackground>
     </SafeAreaView>
   );

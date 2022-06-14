@@ -11,6 +11,7 @@ export const SearchLocationBar = ({ placeholder }) => {
   return (
     <SearchContainer>
       <Searchbar
+        icon="map-marker"
         placeholder={placeholder}
         value={searchKeyword}
         onChangeText={setSearchKeyword}

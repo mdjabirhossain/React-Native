@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { TouchableOpacity, Text, StyleSheet } from "react-native";
 import styled from "styled-components/native";
+import { LocationContext } from "../../services/location/location.context";
 
 const Button = styled(TouchableOpacity)`
   border-radius: ${(props) => props.size / 2}px;
@@ -34,36 +35,10 @@ const ButtonText = styled.Text`
 // `;
 
 export const RoundedButton = ({ size }) => {
+  const { search } = useContext(LocationContext);
   return (
     <Button size={size}>
       <ButtonText size={size}>+</ButtonText>
     </Button>
   );
 };
-
-// export const RoundedButton = ({
-//   style = {},
-//   textStyle = {},
-//   size = 125,
-//   ...props
-// }) => {
-//   return (
-//     <TouchableOpacity style={[styles(size).radius, style]}>
-//       <Text style={[styles(size).text, textStyle]}>{props.title}</Text>
-//     </TouchableOpacity>
-//   );
-// };
-
-// const styles = (size) =>
-//   StyleSheet.create({
-//     radius: {
-//       borderRadius: size / 2,
-//       width: size,
-//       height: size,
-//       alignItems: "center",
-//       justifyContent: "center",
-//       borderColor: "#fff",
-//       borderWidth: 2,
-//     },
-//     text: { color: "#fff", fontSize: size / 3 },
-//   });

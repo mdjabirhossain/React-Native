@@ -36,12 +36,11 @@ export const AppNavigator = () => (
   <Tab.Navigator
     screenOptions={createScreenOptions}
     tabBarOptions={{
-      activeTintColor: colors.brand.primary,
+      activeTintColor: "#8A9A5B", //olive or sage green
       inactiveTintColor: colors.brand.muted,
     }}
   >
     <Tab.Screen name="Tracker" component={TrackerScreen} />
-    <Tab.Screen name="Log" component={LogScreen} />
     <Tab.Screen name="Settings" component={SettingsScreen} />
   </Tab.Navigator>
 );

@@ -14,7 +14,7 @@ import { SearchLocationBar } from "../components/search-location.component";
 import { Spacer } from "../../../components/spacer/spacer.component";
 import styled from "styled-components/native";
 import { RoundedButton } from "../../../components/utility/rounded-button.component";
-
+import { FromToQuery } from "../components/from-to-query.component";
 const ToggleContainer = styled.View`
   flex-direction: row;
 `;
@@ -29,23 +29,16 @@ export const TrackerScreen = () => {
     <SafeAreaView style={styles.safeContainerStyle}>
       <TrackerBackground>
         <TrackerCover />
-        <Spacer position="bottom" size="large" />
-        <Spacer position="bottom" size="large" />
-        <Spacer position="bottom" size="large" />
-        <Spacer position="bottom" size="large" />
-        <Spacer position="bottom" size="large" />
-        <Spacer position="bottom" size="large" />
         <TrackerContainer>
           <Spacer position="top" size="medium" />
           <DropDownMenu dropDownType="Method" />
-          <SearchLocationBar placeholder="From" />
-          <SearchLocationBar placeholder="To" />
+          <FromToQuery />
           <Spacer position="bottom" size="large" />
         </TrackerContainer>
-        <RoundedButtonContainer>
+        {/* <RoundedButtonContainer>
           <Spacer position="top" size="medium" />
           <RoundedButton size={100} />
-        </RoundedButtonContainer>
+        </RoundedButtonContainer> */}
       </TrackerBackground>
     </SafeAreaView>
   );

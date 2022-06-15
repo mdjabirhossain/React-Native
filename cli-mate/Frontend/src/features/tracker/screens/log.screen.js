@@ -19,7 +19,7 @@ const ToggleContainer = styled.View`
   flex-direction: row;
 `;
 
-export const TrackerScreen = () => {
+export const LogScreen = () => {
   const [showDropDown, setShowDropDown] = useState(false);
   const [method, setMethod] = useState("");
   const [toggleTransportation, setToggleTransportation] = useState(true);

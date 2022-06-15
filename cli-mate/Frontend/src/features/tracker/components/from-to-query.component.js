@@ -4,7 +4,7 @@ import { Searchbar } from "react-native-paper";
 import styled from "styled-components/native";
 import { LocationContext } from "../../../services/location/location.context";
 import { Spacer } from "../../../components/spacer/spacer.component";
-
+import { ScoreScreen } from "../../score/screens/score.screen";
 const SearchContainer = styled.View`
   padding: ${(props) => props.theme.space[3]};
 `;

@@ -2,10 +2,9 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 import { Octicons } from "@expo/vector-icons";
-import { TrackerScreen } from "../../features/tracker/screens/tracker.screen";
 import { colors } from "../../infrastructure/theme/colors";
 import { Text } from "../../components/typography/text.component";
-
+import { TrackerNavigator } from "./tracker.navigator";
 const Tab = createBottomTabNavigator();
 
 const TAB_ICON = {
@@ -24,10 +23,6 @@ const createScreenOptions = ({ route }) => {
   };
 };
 
-const LogScreen = () => {
-  return <Text>Log</Text>;
-};
-
 const SettingsScreen = () => {
   return <Text>Settings</Text>;
 };
@@ -40,7 +35,7 @@ export const AppNavigator = () => (
       inactiveTintColor: colors.brand.muted,
     }}
   >
-    <Tab.Screen name="Tracker" component={TrackerScreen} />
+    <Tab.Screen name="Tracker" component={TrackerNavigator} />
     <Tab.Screen name="Settings" component={SettingsScreen} />
   </Tab.Navigator>
 );

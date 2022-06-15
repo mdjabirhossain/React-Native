@@ -21,12 +21,22 @@ export const TrackerCover = styled.View`
   background-color: rgba(255, 255, 255, 0.3);
 `;
 
+// export const TrackerContainer = styled.View`
+//   background-color: rgba(255, 255, 255, 0.7);
+//   padding: ${(props) => props.theme.space[3]};
+//   margin-top: ${(props) => props.theme.space[2]};
+//   margin-left: ${(props) => props.theme.space[3]};
+//   margin-right: ${(props) => props.theme.space[3]};
+// `;
+
 export const TrackerContainer = styled.View`
+  border-radius: 10px;
+  width: 350px;
+  height: 300px;
   background-color: rgba(255, 255, 255, 0.7);
   padding: ${(props) => props.theme.space[3]};
   margin-top: ${(props) => props.theme.space[2]};
-  margin-left: ${(props) => props.theme.space[3]};
-  margin-right: ${(props) => props.theme.space[3]};
+  margin-left: 22px;
 `;
 
 export const Title = styled(Text)`

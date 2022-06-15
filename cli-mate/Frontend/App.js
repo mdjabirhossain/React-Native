@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { Text, View } from "react-native";
-import { TrackerScreen } from "./src/features/tracker/screens/tracker.screen";
+import { LogScreen } from "./src/features/tracker/screens/log.screen";
 import { ThemeProvider } from "styled-components/native";
 import { Provider as PaperProvider } from "react-native-paper";
 import { theme } from "./src/infrastructure/theme";

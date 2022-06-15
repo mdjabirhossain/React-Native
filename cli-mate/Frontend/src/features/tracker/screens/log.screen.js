@@ -19,12 +19,12 @@ const ToggleContainer = styled.View`
   flex-direction: row;
 `;
 
-export const LogScreen = () => {
+export const LogScreen = ({ navigation }) => {
   const [showDropDown, setShowDropDown] = useState(false);
   const [method, setMethod] = useState("");
   const [toggleTransportation, setToggleTransportation] = useState(true);
   const [togglePower, setTogglePower] = useState(false);
-
+  console.log("navigation ", navigation);
   return (
     <SafeAreaView style={styles.safeContainerStyle}>
       <TrackerBackground>
@@ -32,7 +32,7 @@ export const LogScreen = () => {
         <TrackerContainer>
           <Spacer position="top" size="medium" />
           <DropDownMenu dropDownType="Method" />
-          <FromToQuery />
+          <FromToQuery navigation={navigation} />
           <Spacer position="bottom" size="large" />
         </TrackerContainer>
         {/* <RoundedButtonContainer>

@@ -4,14 +4,15 @@ import { Searchbar } from "react-native-paper";
 import styled from "styled-components/native";
 import { LocationContext } from "../../../services/location/location.context";
 import { Spacer } from "../../../components/spacer/spacer.component";
-import { ScoreScreen } from "../../score/screens/score.screen";
+import { ScoreScreen } from "../screens/score.screen";
 const SearchContainer = styled.View`
   padding: ${(props) => props.theme.space[3]};
 `;
-export const FromToQuery = () => {
+export const FromToQuery = ({ navigation }) => {
   const { search } = useContext(LocationContext);
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
+  const { navigate } = navigation;
   return (
     <SearchContainer>
       <Searchbar
@@ -24,6 +25,7 @@ export const FromToQuery = () => {
         onSubmitEditing={() => {
           if (from && to) {
             search(from, to);
+            navigate("Score");
           }
         }}
       />
@@ -38,6 +40,7 @@ export const FromToQuery = () => {
         onSubmitEditing={() => {
           if (from && to) {
             search(from, to);
+            navigate("Score");
           }
         }}
       />
